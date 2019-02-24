@@ -1,0 +1,17 @@
+<!-- home.handlebars -->
+<h1>{{response}}</h1>
+
+<form method="POST" action="/clarifai">
+  <fieldset>
+    <legend>New URL</legend>
+    <div class="form-group">
+        <label for="donation">URL</label><br>
+        <input class="form-control" id="donation" type="text" name="url" value="{{donation.donation}}"/>
+    </div>
+  </fieldset>
+
+  <!-- BUTTON -->
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Save Donation</button>
+  </div>
+</form>
