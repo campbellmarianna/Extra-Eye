@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 
 app.get('/', (req, res) => {
-  res.render('home', { msg: 'Handlebars are Cool!' });
+  res.render('home', { msg: 'Handlebars and Hacking are Cool!' });
 })
 
 const APIKey = process.env.CLARIFAI_API_KEY
@@ -51,6 +51,7 @@ app.post('/clarifai', (req,res) => {
 // If new image associated words are not in target words return nothing
 
 
-app.listen(3000, () => {
-  console.log('App listening on port 3000!')
-})
+var port = process.env.PORT || '3000';
+app.listen(port, () => {
+    console.log('App listening on port 3000!')
+});
